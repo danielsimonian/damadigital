@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --preto: black;
+    --branco: #FFFFFF;
+    --font-padrao: "Lexend", sans-serif;
+}
+
+* {
+    font-family: "Lexend", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--branco);
+}
+
+ul {
+    list-style-type: none;
+}
+
+html, body, main {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+header {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.logo-dama {
+    width: 100px;
+}
+
+.div-span {
+    justify-self: right;
+    align-self: center;
+}
+
+menu {
+    display: none;
+    grid-column: 2 / -1;
+    justify-self: right;
+    text-align: right;
+}
+
+menu li {
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+menu a:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-weight: 300;
+}
+
+/* Estilo do Menu Hamburguer */
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+
+
+.text-main {
+    margin: 40px auto 40px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.text-main h1 {
+    font-weight: lighter;
+    font-size: 2.5em;
+}
+
+.text-main p {
+    font-weight: lighter;
+    max-width: 550px;
+    margin: auto;
+}
+
+/* hr */
+.div-hr {
+    margin: 40px;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+}
+
+/* section - quem somos? */
+.container-quem-somos {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 3fr;
+    margin: 20px;
+}
+
+/* article - quem somos */
+.quem-somos {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    max-width: 700px;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 40px;
+}
+
+.quem-somos h1 {
+    font-weight: 200;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.quem-somos p {
+    font-weight: lighter;
+    text-align: justify;
+}
+
+/* user1 grid config. */
+.user {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    max-width: 500px;
+    justify-self: end;
+    align-self: center;
+}
+
+.user-foto-container {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    max-width: 200px;
+    justify-self: start;
+    align-self: center;
+}
+
+/* user2 grid config. */
+.user2 {
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+    max-width: 500px;
+    justify-self: start;
+    align-self: center;
+}
+
+.user2-foto-container {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    max-width: 200px;
+    justify-self: end;
+    align-self: center;
+}
+
+/* user config. txt e img */
+.user-h2 {
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.user-h4 {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.user-p {
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+.user-foto {
+    width: 200px;
+}
+
+/* form */
+.forms-container {
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    text-align: center;
+}
+
+.vamos-conversar {
+    align-self: center;
+    justify-self: center;
+}
+
+.vamos-conversar h1 {
+    font-size: 1.7em;
+}
+
+.div-form {
+    margin: 5px 20px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    padding: 20px;
+    justify-self: center;
+    align-self: center;
+    width: 450px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.nome {
+    grid-column: 1 / 2;
+}
+
+.sobrenome {
+    grid-column: 2 / 3;
+}
+
+.email, .assunto {
+    grid-column: 1 / -1;
+}
+
+input {
+    border-radius: 10px;
+    height: 40px;
+    border: solid 2px grey;
+    padding: 10px;
+    color: grey;
+}
+
+textarea {
+    grid-column: 1 / -1;
+    border-radius: 10px;
+    border: solid 2px grey;
+    padding: 10px;
+    color: grey;
+}
+
+.enviar, .reset {
+    background-color: grey;
+    color: var(--branco);
+}
+
+.enviar:hover, .reset:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
+/* estilo da borda quando selecionada */
+    input[type=text], input[type=email], textarea {
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+    input[type=text]:focus, input[type=email]:focus, textarea:focus {
+    border: 3px solid #555;
+}
+
+@media screen and (min-width:768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+    }
+
+    .logo-dama {
+        width: 150px;
+    }
+    
+    menu {
+        display: inline; /* aparece menu quando tela grande */
+        grid-row: 1 / -1;
+        justify-self: right;
+        align-self: center;
+        padding-right: 30px;
+    }
+
+    menu li{
+        display: inline-block;
+        margin: 0 0 0 10px;
+        font-weight: lighter;
+    }
+
+    #menu-hamburguer {
+        display: none;
+    }
+
+    .quem-somos-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr;
+        gap: 10px;
+    }
+
+    .quem-somos-div-h1 {
+        
+        grid-column: 2 / 3;
+        justify-self: right;
+    }
+
+    .quem-somos-div-p {
+        justify-self: left;
+    }
+
+    
+}
