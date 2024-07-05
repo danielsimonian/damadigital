@@ -19,6 +19,7 @@
 
 a:link {
     text-decoration: none;
+    color: var(--branco);
 }
 
 a:visited {
@@ -199,6 +200,7 @@ menu a:hover {
     display: grid;
     grid-template-rows: 0.5fr 3fr;
     text-align: center;
+    margin-top: 50px;
 }
 
 .vamos-conversar {
