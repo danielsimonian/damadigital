@@ -84,17 +84,29 @@ menu a:hover {
     cursor: pointer;
 }
 
+.video {
+    height: 90vh;
+}
+
 /* container config. */
 .container {
     width: 95%;
-    margin: 50px auto;
+    margin: 10px auto;
+    height: 100vh;
 }
 
 /* section - quem somos? */
-.quem-somos {
+.quem-somos-container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 10px;
+    grid-template-rows: auto auto;
+}
+
+.quem-somos {
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-self: center;
+    gap: 5px;
 }
 
 .quem-somos h1 {
@@ -102,10 +114,12 @@ menu a:hover {
     font-family: var(--font-smooch);
     font-size: 62px;
     font-weight: normal;
+    text-align: right;
 }
 
 .quem-somos .p1 {
     grid-column: 2 / -1;
+    
 }
 
 .quem-somos .p2 {
@@ -118,7 +132,7 @@ menu a:hover {
 
 .quem-somos p {
     font-size: 12px;
-    font-weight: lighter;
+    font-weight: 200;
     width: 100%;
 }
 
@@ -126,9 +140,10 @@ menu a:hover {
 
 /*user 1 e 2 */
 .users {
+    grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .user1-foto, .user2-foto {
@@ -150,7 +165,7 @@ menu a:hover {
 .user1 p, .user2 p {
     font-family: var(--font-lexend);
     font-size: 0.8em;
-    font-weight: 200;
+    font-weight: 100;
     margin-top: 5px;
 }
 
@@ -158,6 +173,7 @@ menu a:hover {
 .user1 {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
+    align-self: baseline;
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
@@ -170,7 +186,7 @@ menu a:hover {
 
 .user1-info {
     grid-column: 2 / -1;
-    align-self: center;
+    align-self: baseline;
 }
 
 /* user 2 */
@@ -185,7 +201,7 @@ menu a:hover {
     grid-column: 1 / 2;
     justify-self: end;
     text-align: right;
-    align-self: center;
+    align-self: baseline;
 
 }
 
@@ -198,33 +214,36 @@ menu a:hover {
 /* form */
 .forms-container {
     display: grid;
-    grid-template-rows: 0.5fr 3fr;
-    text-align: center;
-    margin-top: 50px;
+    grid-template-rows: auto auto;
 }
 
 .vamos-conversar {
+    grid-row: 1 / 2;
     align-self: center;
     justify-self: center;
 }
 
 .vamos-conversar h1 {
-    font-size: 1.7em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 .div-form {
-    margin: 5px 20px;
+    grid-row: 2 / -1;
     border-radius: 10px;
     background-color: var(--branco);
     padding: 20px;
-    justify-self: center;
-    align-self: center;
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .nome {
@@ -245,6 +264,7 @@ input {
     border: solid 2px grey;
     padding: 10px;
     color: grey;
+    width: 100%;
 }
 
 textarea {
@@ -329,28 +349,18 @@ textarea {
         display: none;
     }
 
-    .container {
-        width: 80%;
-    }
-
-    .quem-somos-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 3fr 1fr;
-        gap: 10px;
-    }
-
     .quem-somos h1 {
-        font-size: 110px;
-        margin-right: 20px;
+        align-self: center;
+        text-align: center;
+        font-size: 80px;
     }
     
     .quem-somos p {
-        font-size: 19px;
-        font-weight: 200;
+        font-size: 20px;
     }
 
     .user1-foto, .user2-foto {
-        width: 384px;
+        width: 200px;
     }
 
     .user1 h2, .user2 h2 {

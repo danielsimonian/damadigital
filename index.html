@@ -10,7 +10,7 @@
     <title>DAMA Digital</title>
 </head>
 <body onresize=mudouTamanho()>
-    <header>
+    <header class="">
       <div class="div-img">
         <a href="index.html" class="img-link">
           <img class="logo-dama" src="img/logo_dama_branco.png" alt="">
@@ -31,14 +31,15 @@
       </menu>
     </header>
     <main>
-      <section class="video-main">
-        <iframe width="100%" height="480px" src="https://www.youtube.com/embed/AzFzDF9Vw-A?si=YUWHxApJafD96uzy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!--section video-->
+      <section class="video">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AzFzDF9Vw-A?si=YUWHxApJafD96uzy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </section>
-
-      <section class="container" id="quem-somos">
-        <article class="container quem-somos">
+      <!--section quem somos-->
+      <section class="container quem-somos-container" id="quem-somos">
+        <article class="quem-somos">
           <h1>
-            Quem somos
+            Quem somos?
           </h1>
           <p class="p1">
             Somos um casal que respira audiovisual há mais de 10 anos, trazendo toda a nossa experiência e conhecimento para fazer o que amamos. Já passamos por diversos projetos incríveis, desde comerciais, jingles, até produções independentes, sempre entregando resultados de qualidade e criatividade.
@@ -50,32 +51,31 @@
             Se você está procurando serviços profissionais de fotografia, gerenciamento de redes sociais, produção, edição, gravação em estúdio ou qualquer outra necessidade relacionada ao audiovisual: nós podemos te ajudar!
           </p>
         </article>
-      <section class= "users">  
-        <article class="user1">
-          <div class="user1-foto-div">
-            <img class="user1-foto" src="img/img-ma.png" alt="">
+        <article class= "users">  
+          <div class="user1">
+            <div class="user1-foto-div">
+              <img class="user1-foto" src="img/img-ma.png" alt="">
+            </div>
+            <div class="user1-info">
+              <h2 class="user1-h2">Marcella Lima</h2>
+              <h4 class="user1-h4">CEO & Filmmarker</h4>
+              <p class="user1-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim nesciunt fugiat deserunt, corrupti reprehenderit! Quos aliquid vitae animi nam molestiae exercitationem facilis iste sunt at, provident, corrupti inventore fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsum, illo, consectetur officia sapiente quae eligendi ab fuga eius reiciendis delectus nemo quibusdam asperiores facere repudiandae saepe atque inventore impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse vitae non impedit consectetur quis in assumenda iure est odit sunt amet labore provident eos quod fuga, expedita quas omnis.</p>
+            </div>
           </div>
-          <div class="user1-info">
-            <h2 class="user1-h2">Marcella Lima</h2>
-            <h4 class="user1-h4">CEO & Filmmarker</h4>
-            <p class="user1-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse!</p>
-          </div>
-        </article>
-        <article class="user2">
-          <div class="user2-info">
-            <h2 class="user2-h2">Daniel Simonian</h2>
-            <h4 class="user2-h4">CEO & Produtor Musical</h4>
-            <p class="user2-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse!</p>
-          </div>
-          <div class="user2-foto-div">
-            <img class="user2-foto" src="img/img-dani.png" alt="">
-          </div>
-        </article>
-
-
-        
+          <div class="user2">
+            <div class="user2-info">
+              <h2 class="user2-h2">Daniel Simonian</h2>
+              <h4 class="user2-h4">CEO & Produtor Musical</h4>
+              <p class="user2-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatum molestias voluptatem recusandae, nam veniam sit adipisci facere, velit, dolore tenetur quaerat. Consectetur ipsam nostrum dolore. Aperiam deleniti quia incidunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptas et facilis ut soluta facere in autem nulla sint earum eveniet. Id quibusdam laudantium, ea quaerat voluptatem voluptate deserunt nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque ut sapiente repudiandae eaque quisquam beatae hic perspiciatis quae eos unde quaerat, animi sequi ipsam iusto pariatur fuga esse laboriosam.</p>
+            </div>
+            <div class="user2-foto-div">
+              <img class="user2-foto" src="img/img-dani.png" alt="">
+            </div>
+          </div>  
+        </article>  
       </section>
-      <section class="forms-container" id="contato">
+      <!--section forms-->
+      <section class="container forms-container" id="contato">
         <div class="vamos-conversar">
           <h1>Vamos conversar?</h1>
         </div>
@@ -85,7 +85,7 @@
             <input class="sobrenome" type="text" name="sobrenome" id="isobrenome" required placeholder="Sobrenome">
             <input class="email" type="email" name="email" id="iemail" required placeholder="E-mail de contato">
             <input class="assunto" type="text" name="assunto" id="iassunto" required placeholder="Assunto">
-            <textarea name="" id="" cols="30" rows="5" placeholder="Digite sua mensagem"></textarea>
+            <textarea name="" id="" cols="30" rows="14" placeholder="Digite sua mensagem"></textarea>
             <input class="reset" type="reset" value="Limpar campos">
             <input class="enviar" type="submit">
           </form>
@@ -93,15 +93,7 @@
       </section>
     </main>
     <footer>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/damadigital__/" target="_blank">
-          <img class="social-icon" src="img/icone_instagram.png" alt=""></a>
-        <a href="https://www.youtube.com/@damadigital" target="_blank">
-          <img class="social-icon" src="img/icone_youtube.png" alt=""></a>
-        <a href="#">
-          <img class="social-icon" src="img/icone_twitter.png" alt="">
-      </a>
-      </div>
+      
     </footer>
   </body>
 </html>
