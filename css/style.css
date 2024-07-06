@@ -31,6 +31,11 @@ ul {
     font-variant: small-caps;
 }
 
+hr {
+    width: 50%;
+    margin: 50px auto;
+}
+
 html, body, main {
     background-color: var(--preto);
     color: var(--branco);
@@ -104,9 +109,11 @@ menu a:hover {
 .quem-somos {
     grid-row: 1 / 2;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
     align-self: center;
-    gap: 5px;
+    gap: 10px;
+    text-align: justify;
+   
 }
 
 .quem-somos h1 {
@@ -114,7 +121,9 @@ menu a:hover {
     font-family: var(--font-smooch);
     font-size: 62px;
     font-weight: normal;
-    text-align: right;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .quem-somos .p1 {
@@ -143,7 +152,7 @@ menu a:hover {
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .user1-foto, .user2-foto {
@@ -152,7 +161,7 @@ menu a:hover {
 
 .user1 h2, .user2 h2 {
     font-family: var(--font-smooch);
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 300;
 }
 
@@ -173,20 +182,20 @@ menu a:hover {
 .user1 {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    align-self: baseline;
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
 
 .user1-foto-div {
     grid-column: 1 / 2;
-    justify-self: end;
+    justify-self: center;
     align-self: center;
 }
 
 .user1-info {
     grid-column: 2 / -1;
-    align-self: baseline;
+    text-align: right;
+    align-self: center;
 }
 
 /* user 2 */
@@ -199,10 +208,8 @@ menu a:hover {
 
 .user2-info {
     grid-column: 1 / 2;
-    justify-self: end;
-    text-align: right;
-    align-self: baseline;
-
+    text-align: left;
+    align-self: center;
 }
 
 .user2-foto-div {
@@ -211,30 +218,87 @@ menu a:hover {
     align-self: center;
 }
 
+/*clientes*/
+.clientes {
+    display: grid;
+    grid-template-rows: auto 6fr;
+    justify-items: center;
+}
+
+.clientes h1 {
+    grid-row: 1 / 2;
+    font-family: var(--font-smooch);
+    font-size: 62px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.galeria-clientes {
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+}
+
+.galeria-clientes img {
+    width: 100px;
+}
+
 /* form */
 .forms-container {
-    display: grid;
-    grid-template-rows: auto auto;
+    display: block;
+    grid-template-rows: 3fr 1fr 6fr;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    height: auto;
 }
 
-.vamos-conversar {
-    grid-row: 1 / 2;
+.assinatura {
+    margin: 0 10px;
+}
+
+.assinatura h1 {
+    font-family: var(--font-smooch);
+    font-size: 52px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.assinatura p {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.assinatura p:last-child {
+    font-weight: 500;
+}
+
+.contato {
     align-self: center;
     justify-self: center;
+    margin-top: 50px;
 }
 
-.vamos-conversar h1 {
-    font-size: 2.5em;
+.contato h1 {
+    font-family: var(--font-smooch);
+    font-size: 40px;
+    font-weight: normal;
     text-align: center;
+    font-weight: 600;
+
 }
 
 .div-form {
-    grid-row: 2 / -1;
-    border-radius: 10px;
-    background-color: var(--branco);
+    background-color: #D9D9D9;
     padding: 20px;
-    width: 80%;
-    height: 90%;
     margin: 0 auto;
 }
 
@@ -243,7 +307,6 @@ form {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     height: 100%;
-    width: 100%;
 }
 
 .nome {
@@ -295,6 +358,72 @@ textarea {
 
     input[type=text]:focus, input[type=email]:focus, textarea:focus {
     border: 3px solid #555;
+}
+
+/* footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo-footer {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.logo-footer img {
+    width: 100px;
+}
+
+.redes-footer {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.redes-footer img:first-child {
+    grid-column: 1 / 2;
+}
+
+.redes-footer img {
+    grid-column: 2 / 3;
+    width: 40px;
+    margin: 10px;
+}
+
+.redes-footer img:last-child {
+    grid-row: 3 / -1;
+}
+
+.menu-footer {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+}
+
+.li-footer {
+    display: inline;
+    font-size: 17px;
+}
+
+.li-footer:before {
+    content: url(../img/Line\ 1.png);
+    margin: 10px;
+}
+    
+.li-footer:first-child:before {
+    content: none;
+}
+
+.direitos {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    font-weight: lighter;
+    font-size: 12px;
 }
 
 @media screen and (min-width:768px) {

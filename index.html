@@ -10,7 +10,7 @@
     <title>DAMA Digital</title>
 </head>
 <body onresize=mudouTamanho()>
-    <header class="">
+    <header id="inicio">
       <div class="div-img">
         <a href="index.html" class="img-link">
           <img class="logo-dama" src="img/logo_dama_branco.png" alt="">
@@ -23,9 +23,9 @@
       </div>
       <menu id="itens">
         <ul>
-          <li><a href="">início</a></li>
-          <li><a href="#clientes">clientes</a></li>
+          <li><a href="#inico">início</a></li>
           <li><a href="#quem-somos">quem somos?</a></li>
+          <li><a href="#nossos-clientes">nossos clientes</a></li>
           <li><a href="#contato">contato</a></li>
         </ul>
       </menu>
@@ -59,14 +59,14 @@
             <div class="user1-info">
               <h2 class="user1-h2">Marcella Lima</h2>
               <h4 class="user1-h4">CEO & Filmmarker</h4>
-              <p class="user1-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim nesciunt fugiat deserunt, corrupti reprehenderit! Quos aliquid vitae animi nam molestiae exercitationem facilis iste sunt at, provident, corrupti inventore fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsum, illo, consectetur officia sapiente quae eligendi ab fuga eius reiciendis delectus nemo quibusdam asperiores facere repudiandae saepe atque inventore impedit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam esse vitae non impedit consectetur quis in assumenda iure est odit sunt amet labore provident eos quod fuga, expedita quas omnis.</p>
+              <p class="user1-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos!</p>
             </div>
           </div>
           <div class="user2">
             <div class="user2-info">
               <h2 class="user2-h2">Daniel Simonian</h2>
               <h4 class="user2-h4">CEO & Produtor Musical</h4>
-              <p class="user2-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos! Aliquid, esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatum molestias voluptatem recusandae, nam veniam sit adipisci facere, velit, dolore tenetur quaerat. Consectetur ipsam nostrum dolore. Aperiam deleniti quia incidunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, voluptas et facilis ut soluta facere in autem nulla sint earum eveniet. Id quibusdam laudantium, ea quaerat voluptatem voluptate deserunt nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque cumque ut sapiente repudiandae eaque quisquam beatae hic perspiciatis quae eos unde quaerat, animi sequi ipsam iusto pariatur fuga esse laboriosam.</p>
+              <p class="user2-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, assumenda laboriosam harum sequi hic fugit? Aut voluptate totam, eius, excepturi possimus cupiditate dolorem non in magni ullam dignissimos!</p>
             </div>
             <div class="user2-foto-div">
               <img class="user2-foto" src="img/img-dani.png" alt="">
@@ -74,10 +74,39 @@
           </div>  
         </article>  
       </section>
-      <!--section forms-->
-      <section class="container forms-container" id="contato">
-        <div class="vamos-conversar">
-          <h1>Vamos conversar?</h1>
+      <hr>
+      <!--section clientes-->
+      <section class="container clientes" id="nossos-clientes">
+        <div class="clientes-h1">
+          <h1>Nossos Clientes</h1>
+        </div>
+        <div class="galeria-clientes">
+          <img src="img/assesp.png" alt="">
+          <img src="img/hortifruti.png" alt="">
+          <img src="img/hydra.png" alt="">
+          <img src="img/simonian.png" alt="">
+          <img src="img/spfc.png" alt="">
+          <img src="img/tombeach.png" alt="">
+          <img src="img/genial.png" alt="">
+          <img src="img/opensp.png" alt="">
+          <img src="img/sampaio.png" alt="">
+          <img src="img/glorinha 1.png" alt="">
+        </div>
+      </section>
+      <hr>
+      <!--section assinatura forms-->
+      <section class="forms-container container" id="contato">
+        <div class="assinatura">
+            <div>
+                <h1>Sua agência digital</h1>
+            </div>
+            <div>
+                <p>Somos especializados em cobertura e produção de eventos, fotografia, video, som, luz, design gráfico, redes sociais e produção fonográfica.</p>
+                <p>Como podemos te ajudar hoje? ;)</p>
+            </div>
+        </div>
+        <div class="contato">
+            <h1>Entre em contato</h1>
         </div>
         <div class="div-form">
           <form action="">
@@ -85,7 +114,7 @@
             <input class="sobrenome" type="text" name="sobrenome" id="isobrenome" required placeholder="Sobrenome">
             <input class="email" type="email" name="email" id="iemail" required placeholder="E-mail de contato">
             <input class="assunto" type="text" name="assunto" id="iassunto" required placeholder="Assunto">
-            <textarea name="" id="" cols="30" rows="14" placeholder="Digite sua mensagem"></textarea>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Digite sua mensagem"></textarea>
             <input class="reset" type="reset" value="Limpar campos">
             <input class="enviar" type="submit">
           </form>
@@ -93,7 +122,25 @@
       </section>
     </main>
     <footer>
-      
+      <div class="logo-footer">
+        <a href="index.html"><img src="img/logo_dama_branco.png" alt=""></a>
+      </div>
+      <div class="redes-footer">
+        <a href=""><img src="img/instagram-branco-dama 1.png" alt=""></a>
+        <a href=""><img src="img/youtube-branco-dama 1.png" alt=""></a>
+        <a href=""><img src="img/whatsapp-1 1.png" alt=""></a>
+      </div>
+      <div class="menu-footer">
+          <ul>
+            <li class="li-footer"><a href="#inicio">início</a></li>
+            <li class="li-footer"><a href="#quem-somos">quem somos?</a></li>
+            <li class="li-footer"><a href="#nossos-clientes">nossos clientes</a></li>
+            <li class="li-footer"><a href="#contato">contato</a></li>
+          </ul>
+      </div>
+      <div class="direitos">
+        <p>© Dama Digital, Inc. 2022. Sua agência digital</p>
+      </div>
     </footer>
   </body>
 </html>
