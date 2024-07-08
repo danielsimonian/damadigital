@@ -74,7 +74,7 @@ menu {
 }
 
 menu li {
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 23px;
 }
 
@@ -458,11 +458,11 @@ footer {
         font-size: 23px;
         font-weight: lighter;
         margin-top: 20px;
-
     }
 
     menu li{
         display: inline;
+        font-weight: 300;
     }
 
     li:before {
@@ -478,22 +478,53 @@ footer {
         display: none;
     }
 
+    /* section quem somos */
+    .quem-somos-container {
+        display: grid;
+        grid-template-rows: 1fr 4fr;
+        padding: 50px 100px;
+    }
+
+    .quem-somos {
+        grid-row: 1 / 2;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 10;
+        column-gap: 20px;
+    }
+
     .quem-somos h1 {
-        align-self: center;
-        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        font-weight: 300;
+        text-transform: none;
+        line-height: 50px;
         font-size: 80px;
+        align-self: center;
+        text-align: right;
+    }
+
+    .quem-somos .p1 .p2 .p3 {
+        grid-column: 2 / -1;
+        grid-row: 2 / -1;
+    }
+
+    .quem-somos p {
+        font-weight: 100;
     }
     
     .quem-somos p {
         font-size: 20px;
     }
 
+    /*Section users*/
     .user1-foto, .user2-foto {
         width: 200px;
     }
 
     .user1 h2, .user2 h2 {
-        font-size: 40px;
+        font-size: 50px;
         font-weight: 300;
     }
     
@@ -508,12 +539,40 @@ footer {
         margin-top: 5px;
     }
 
+    .user1-info {
+        text-align: left;
+        padding: 20px;
+    }
+
+    .user2-info {
+        text-align: right;
+        padding: 20px;
+    }
+
+    .user1 {
+        margin-top: 10px;
+    }
+
+    .user2 {
+        margin-top: -100px;
+    }
+
+    /*section clientes*/
+    .galeria-clientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+
+    .galeria-clientes img {
+        width: 150px;
+    }
+
+    .form-container {
+        background-color: #D9D9D9;
+    }
+
     .div-form {
-        width: 70%;
+        width: 40%;
     }
-
-    .vamos-conversar h1 {
-        font-size: 2em;
-    }
-
 }
