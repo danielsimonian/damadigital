@@ -112,7 +112,6 @@ menu a:hover {
     align-self: center;
     gap: 10px;
     text-align: justify;
-   
 }
 
 .quem-somos h1 {
@@ -572,8 +571,6 @@ footer {
         display: none;
     }
 
-
-
     /* section quem somos */
     .quem-somos-container {
         display: grid;
@@ -588,7 +585,6 @@ footer {
         grid-template-rows: auto auto auto;
         row-gap: 10;
         column-gap: 20px;
-        border: solid red;
     }
 
     .quem-somos h1 {
@@ -616,10 +612,6 @@ footer {
     }
 
     /*Section users*/
-    .users {
-        border: solid red;
-    }
-
     .user1-foto, .user2-foto {
         width: 200px;
     }
@@ -651,18 +643,15 @@ footer {
     }
 
     .user1 {
-        margin-top: 10px;
-    }
-
-    .user2 {
-        margin-top: -100px;
+        margin-bottom: -100px;
     }
 
     /*section clientes*/
     .galeria-clientes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 100px;
     }
 
     .galeria-clientes img {
