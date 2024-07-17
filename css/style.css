@@ -97,7 +97,6 @@ menu a:hover {
 .container {
     width: 95%;
     margin: 10px auto;
-    height: 100vh;
 }
 
 /* section - quem somos? */
@@ -501,10 +500,6 @@ footer {
         font-size: 1.2em;
     }
 
-    .clientes {
-        height: auto;
-    }
-
     .galeria-clientes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -582,7 +577,7 @@ footer {
     /* section quem somos */
     .quem-somos-container {
         display: grid;
-        grid-template-rows: 1fr 4fr;
+        grid-template-rows: 1fr 2fr;
         padding: 50px 100px;
     }
 
@@ -593,6 +588,7 @@ footer {
         grid-template-rows: auto auto auto;
         row-gap: 10;
         column-gap: 20px;
+        border: solid red;
     }
 
     .quem-somos h1 {
@@ -620,6 +616,10 @@ footer {
     }
 
     /*Section users*/
+    .users {
+        border: solid red;
+    }
+
     .user1-foto, .user2-foto {
         width: 200px;
     }
