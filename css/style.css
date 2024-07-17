@@ -501,6 +501,10 @@ footer {
         font-size: 1.2em;
     }
 
+    .clientes {
+        height: auto;
+    }
+
     .galeria-clientes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -520,7 +524,7 @@ footer {
     }
 }
 
-/* ---------- MOBILE ---------- */
+/* ---------- DESKTOP ---------- */
 @media screen and (min-width:1200px) {
     header {
         display: grid;
