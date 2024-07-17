@@ -426,7 +426,8 @@ footer {
     font-size: 12px;
 }
 
-@media screen and (min-width:768px) {
+/* ---------- IPAD ---------- */
+@media screen and (min-width:768px) and (max-width:1200px) {
     header {
         display: grid;
         grid-template-columns: 1fr;
@@ -477,6 +478,102 @@ footer {
     #menu-hamburguer {
         display: none;
     }
+
+    .quem-somos .p1, .quem-somos .p2, .quem-somos .p3 {
+        font-size: 1em;
+    }
+
+    .quem-somos {
+        margin-bottom: 30px;
+    }
+
+    .user2 {
+        margin-top: -140px;
+    }
+
+    .user1-info {
+        text-align: left;
+        font-size: 1.2em;
+    }
+
+    .user2-info {
+        text-align: right;
+        font-size: 1.2em;
+    }
+
+    .galeria-clientes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .galeria-clientes img {
+        width: 110px;
+    }
+
+    .form-container {
+        background-color: #D9D9D9;
+    }
+
+    .div-form {
+        width: 60%;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media screen and (min-width:1200px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        margin-bottom: 30px;
+    }
+
+    .div-img { 
+        align-self: flex-start;
+        justify-self: center;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
+
+    .logo-dama {
+        width: 150px;
+    }
+    
+    menu {
+        display: inline; /* aparece menu quando tela grande */
+        grid-column: 1 / -1;
+        grid-row: 2 / -1;
+        justify-self: center;
+        align-self: center;
+        padding-right: 30px;
+    }
+
+    menu ul {
+        font-size: 23px;
+        font-weight: lighter;
+        margin-top: 20px;
+    }
+
+    menu li{
+        display: inline;
+        font-weight: 300;
+    }
+
+    li:before {
+        content: url(../img/Line\ 1.png);
+        margin: 10px;
+    }
+        
+    li:first-child:before {
+        content: none;
+    }
+
+    #menu-hamburguer {
+        display: none;
+    }
+
+
 
     /* section quem somos */
     .quem-somos-container {
@@ -561,13 +658,14 @@ footer {
     .galeria-clientes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto 1fr;
+        grid-template-rows: auto auto auto;
     }
 
     .galeria-clientes img {
         width: 150px;
     }
 
+    /* form */
     .form-container {
         background-color: #D9D9D9;
     }
