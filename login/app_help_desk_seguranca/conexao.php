@@ -3,6 +3,7 @@
     $user = 'db_damadigital';
     $pass = 'nNnKJFMvhtE3V@';
     $db = 'db_damadigital';
+    
     $link = new mysqli($host, $user, $pass, $db);
 
 
