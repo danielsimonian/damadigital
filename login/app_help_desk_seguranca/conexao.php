@@ -1,5 +1,5 @@
 <?php
-    $host = 'db_damadigital.mysql.dbaas.com.br';
+    $host = 'myshared0783';
     $user = 'db_damadigital';
     $pass = 'nNnKJFMvhtE3V@';
     $db = 'db_damadigital';
