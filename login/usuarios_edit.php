@@ -2,7 +2,7 @@
   require_once "validador_acesso.php";
   require "app_help_desk_seguranca/conexao.php";
 
-  $sql = "SELECT * FROM tb_user WHERE ID_user = {$_GET['id_user']}";
+  $sql = "SELECT * FROM tb_user WHERE id_user = {$_GET['id_user']}";
   $res = $link->query($sql);
   $row = $res->fetch_object();
 
@@ -12,7 +12,7 @@
         $email = $_POST['email'];
         $perfil = $_POST['perfil'];
 
-        mysqli_query ($link, "UPDATE TB_USER SET `nome` = '$nome', `email` = '$email', `perfil` = '$perfil' WHERE ID_USER = {$_GET['id_user']}"); 
+        mysqli_query ($link, "UPDATE tb_user SET `nome` = '$nome', `email` = '$email', `perfil` = '$perfil' WHERE id_user = {$_GET['id_user']}"); 
         header ('Location:usuarios.php?cadastro=sucesso');
     
       }
@@ -22,7 +22,7 @@
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 

@@ -2,9 +2,9 @@
   require_once "validador_acesso.php";
   require "app_help_desk_seguranca/conexao.php";
 
-  $chamados = mysqli_query($link, "SELECT TB_CHAMADOS.*, TB_USER.nome
-  FROM TB_CHAMADOS
-  INNER JOIN TB_USER ON TB_CHAMADOS.id_user = TB_USER.id_user");
+  $chamados = mysqli_query($link, "SELECT tb_chamados.*, tb_user.nome
+  FROM tb_chamados
+  INNER JOIN tb_user ON tb_chamados.id_user = tb_user.id_user");
 ?>
 
 <html lang="pt-BR">

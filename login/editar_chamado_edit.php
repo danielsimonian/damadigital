@@ -3,7 +3,7 @@
   require_once "app_help_desk_seguranca/conexao.php";
   require_once "validador_user.php";
 
-  $sql = "SELECT * FROM tb_chamados WHERE ID_CHAMADO = {$_GET['id_chamado']}";
+  $sql = "SELECT * FROM tb_chamados WHERE id_chamado = {$_GET['id_chamado']}";
   $res = $link->query($sql);
   $row = $res->fetch_object();
 
@@ -14,7 +14,7 @@
         $descricao = $_POST['descricao'];
         $status = $_POST['status'];
 
-        mysqli_query ($link, "UPDATE TB_CHAMADOS SET `titulo` = '$titulo', `categoria` = '$categoria', `descricao` = '$descricao', `status` = '$status' WHERE ID_CHAMADO = {$_GET['id_chamado']}"); 
+        mysqli_query ($link, "UPDATE tb_chamados SET `titulo` = '$titulo', `categoria` = '$categoria', `descricao` = '$descricao', `status` = '$status' WHERE id_chamado = {$_GET['id_chamado']}"); 
         header ('Location: editar_chamado.php?cadastro=sucesso');
     
       }
@@ -24,7 +24,7 @@
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 

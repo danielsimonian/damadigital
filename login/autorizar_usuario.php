@@ -2,14 +2,14 @@
   require_once "validador_acesso.php";
   require "app_help_desk_seguranca/conexao.php";  require_once "validador_user.php";
   
-  $chamados = mysqli_query($link, "SELECT * FROM TB_USER WHERE `perfil` = 'administrador'");
+  $chamados = mysqli_query($link, "SELECT * FROM tb_user WHERE `perfil` = 'administrador'");
 ?>
 
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 

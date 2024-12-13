@@ -3,7 +3,7 @@ require 'conexao.php';
 session_start();
 
 // Consulta ao banco de dados
-$resultado = mysqli_query($link, 'SELECT * FROM TB_USER;');
+$resultado = mysqli_query($link, 'SELECT * FROM tb_user;');
 
 // Verifica se a consulta retornou algum dado
 if (!$resultado) {

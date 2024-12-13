@@ -9,7 +9,7 @@
         $perfil = $_POST['perfil'];
 
         
-        $sql = 'SELECT email FROM TB_USER WHERE email = "' . $email . '"; ';
+        $sql = 'SELECT email FROM tb_user WHERE email = "' . $email . '"; ';
         $result = mysqli_query($link, $sql);
 
         if (mysqli_num_rows($result) > 0) {

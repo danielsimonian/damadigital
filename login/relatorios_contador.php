@@ -5,7 +5,7 @@ $totalAberto = 0;
 $totalAndamento = 0;
 $totalFinalizado = 0;
 
-$sql = "SELECT status FROM TB_CHAMADOS";
+$sql = "SELECT status FROM tb_chamados";
 $res = $link->query($sql);
 
 if($res) {

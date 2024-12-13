@@ -3,17 +3,17 @@
   require "app_help_desk_seguranca/conexao.php";
   require_once "validador_user.php";
 
-  $chamados = mysqli_query($link, "SELECT TB_CHAMADOS.*, TB_USER.* 
-  FROM TB_CHAMADOS
-  INNER JOIN TB_USER ON TB_CHAMADOS.id_user = TB_USER.id_user
-  WHERE TB_CHAMADOS.status = 'Em Andamento'");
+  $chamados = mysqli_query($link, "SELECT tb_chamados.*, tb_user.* 
+  FROM tb_chamados
+  INNER JOIN tb_user ON tb_chamados.id_user = tb_user.id_user
+  WHERE tb_chamados.status = 'Em Andamento'");
 ?>
 
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 

@@ -1,8 +1,8 @@
 <?php
-    $host = 'myshared0783';
-    $user = 'db_damadigital';
-    $pass = 'nNnKJFMvhtE3V@';
-    $db = 'db_damadigital';
+    $host = 'localhost';
+    $user = 'root';
+    $pass = '';
+    $db = 'db_helpdesk';
     
     $link = new mysqli($host, $user, $pass, $db);
 
