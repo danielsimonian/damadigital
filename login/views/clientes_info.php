@@ -1,6 +1,12 @@
 <?php
   require_once "../models/validador_acesso.php";
   require "../connection/conexao.php";
+
+  $idCliente = $_GET['id_user'];
+
+  $sql = "SELECT * FROM tb_user WHERE id_user = " . $idCliente;
+  $res = mysqli_query($link, $sql);
+  $cliente = mysqli_fetch_assoc($res);
 ?>
 
 <html lang="pt-BR">
@@ -26,7 +32,7 @@
   </nav>
   <main class="container">
     <section class="section text-center m-4">
-      <h5>Bem vindo,<br></h5><h1> <?php echo strtoupper($_SESSION['name']); ?>!</h1>
+      <h1 class="text-light"><?php echo strtoupper($cliente['name']); ?></h1>
     </section>
     <section class="d-flex flex-wrap justify-content-center section border border-light rounded p-4 gap-3">
       <?php
@@ -34,63 +40,46 @@
         if ($usuarioPerfil == 'adm'){
 //HOME ADM      ?>
               <div class="card btn btn-light justify-content-center" style="width:200px;height:200px">
-                <a href="clientes.php" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
+                <a href="servico_cliente.php?id_user=<?php echo $idCliente ?>" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
                   <div class="card-body d-flex flex-column justify-content-center">
                     <div>
                       <img src="../img/icons/clientes.png" width="70" height="70">
                     </div>
                     <div class="mt-2">
-                      Clientes
+                      Serviços
                     </div>
                   </div>
                 </a>
               </div>
 
               <div class="card btn btn-light justify-content-center" style="width:200px;height:200px">
-                <a href="servico_novo.php" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
+                <a href="clientes_edit.php?id_user=<?php echo $idCliente?>" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
                   <div class="card-body d-flex flex-column justify-content-center">
                     <div>
                       <img src="../img/icons/novo-servico.png" width="70" height="70">
                     </div>
                     <div class="mt-2">
-                      Novo Serviço
+                      Editar Cadastro
                     </div>
                   </div>
                 </a>
               </div>
 
               <div class="card btn btn-light justify-content-center" style="width:200px;height:200px">
-                <a href="cadastro.php" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
+                <a href="../models/clientes_excluir.php?id_user=<?php echo $idCliente; ?>" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
                   <div class="card-body d-flex flex-column justify-content-center">
                     <div>
-                      <img src="../img/icons/add-user.png" width="70" height="70">
+                      <img src="../img/icons/deletar-usuario.png" width="70" height="70">
                     </div>
                     <div class="mt-2">
-                      Novo Cadastro
+                      Excluir Cliente
                     </div>
                   </div>
                 </a>
               </div>
           
         <?php } ?>
-        
-        <?php
-          $usuarioPerfil = $_SESSION['profile'];
-          if ($usuarioPerfil == 'cliente'){
-//HOME CLIENTE      ?>
-              <div class="card btn btn-dark justify-content-center" style="width:200px;height:200px">
-                <a href="meus_projetos.php" class="text-dark link-offset-2 link-underline link-underline-opacity-0">
-                  <div class="card-body d-flex flex-column justify-content-center">
-                    <div>
-                      <img src="../img/icons/project.png" width="70" height="70">
-                    </div>
-                    <div class="mt-2">
-                      Meus Projetos
-                    </div>
-                  </div>
-                </a>
-              </div>
-          <?php } ?>
+
     </section>
 
 </main>
@@ -102,7 +91,7 @@
       </script> 
     <?php } ?>
     
-    <?php if (isset($_GET['erro']) && $_GET['erro'] === 'erro') { ?>
+    <?php if (isset($_GET['cadastro']) && $_GET['cadatro'] === 'erro') { ?>
       <script>
           alert('Erro ao cadastrar!');
           window.history.replaceState(null, null, window.location.pathname);

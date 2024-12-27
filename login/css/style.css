@@ -1,0 +1,27 @@
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .input-wrapper input {
+    font-size: 16px;
+    padding: 5px 30px; /* Espaço para o símbolo da moeda */
+}
+
+  .input-wrapper::before {
+    content: "R$";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    margin-left: 10px;
+  }

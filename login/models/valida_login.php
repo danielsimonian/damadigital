@@ -1,3 +1,3 @@
 <?php 
-    require '../conection/valida_login.php';
+    require '../connection/valida_login.php';
 ?>
